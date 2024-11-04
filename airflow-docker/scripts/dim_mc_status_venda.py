@@ -3,7 +3,7 @@ from aux_blob import pegar_arquivo_xls, insert_into, ler_tabela
 df = pegar_arquivo_xls()
 
 # Selecionando a coluna necessaria
-d# Selecionando a coluna necessaria
+# Selecionando a coluna necessaria
 df = df[['STATUS VENDA']].drop_duplicates().reset_index(drop=True)
 df.index = df.index + 1
 

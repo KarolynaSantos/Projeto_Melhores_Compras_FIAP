@@ -114,7 +114,7 @@ def run_blob_script_produto():
 # Definindo o DAG
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2024, 10, 31),
+    'start_date': datetime(2024, 11, 5),
     'retries': 1,
 }
 
@@ -122,7 +122,7 @@ dag = DAG(
     'mc_compras',
     default_args=default_args,
     description='DAG para executar todos os scripts de dimensões em sequência',
-    schedule_interval='@daily',
+    schedule_interval='0 8 * * *',
 )
 
 # Definindo as tarefas
